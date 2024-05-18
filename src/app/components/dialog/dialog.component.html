@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <span>Edit : {{data.name}}</span>
+</mat-toolbar>
+<mat-dialog-content>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" [(ngModel)]="user.name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select [(ngModel)]="user.gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput placeholder="Age" [(ngModel)]="user.age">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>EMail</mat-label>
+        <input matInput placeholder="EMail" [(ngModel)]="user.email">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Phone" [(ngModel)]="user.phone">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+    <button mat-button [mat-dialog-close]="user" cdkFocusInitial color="primary">Ok</button>
+  </mat-dialog-actions>
